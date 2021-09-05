@@ -13,7 +13,9 @@
             style="margin: auto"
             align-self="center"
           >
-            <v-card class="box-card" outlined> </v-card>
+            <v-card class="box-card" outlined>
+              <nuxt/>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
