@@ -18,7 +18,7 @@ export default {
         titleTemplate: '%s - oauth_templates',
         title: 'oauth_templates',
         htmlAttrs: {
-            lang: 'en'
+            lang: 'zh-cn'
         },
         meta: [
             { charset: 'utf-8' },
@@ -41,6 +41,7 @@ export default {
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
+        '@/plugins/i18n.js'
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -69,13 +70,22 @@ export default {
     // See https://github.com/nuxt-community/axios-module#options
     },
     proxy: {
-        '/api/': {
-            target: 'https://h5api.zhefengle.cn', // 这个网站是开源的可以请求到数据的
+        'api': {
+            target: 'https://raw.githubusercontent.com',
+            secure: true,
             pathRewrite: {
                 '^/api/': '/',
                 changeOrigin: true
             }
-        }
+        },
+        '/github_raw': {
+            target: 'https://raw.githubusercontent.com',
+            secure: true,
+            pathRewrite: {
+                '^/api/': '/',
+                changeOrigin: true
+            }
+        },
     },
 
     // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -99,5 +109,9 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
+    },
+    router: { // customize nuxt.js router (vue-router).
+        base: process.env.NODE_ENV == 'production'? './' : '/',
+        middleware: 'i18n' // middleware all pages of the application
     }
 }

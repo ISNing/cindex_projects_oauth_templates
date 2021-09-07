@@ -1,0 +1,16 @@
+{
+  "globalDrawer": {
+    "home": "主页",
+    "downloads": "下载",
+    "devices": "设备"
+  },
+  "ourAppBar": {
+    "account_title": "账户"
+  },
+  "login_page":{
+    "title": "登录",
+    "hint": "你还没有登录，现在登录：",
+    "username_textfield_hint": "用户名",
+    "password_textfield_hint": "输入您的密码"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "globalDrawer": {
+    "home": "Home",
+    "downloads": "Downloads",
+    "devices": "Devices"
+  },
+  "ourAppBar": {
+    "account_title": "Account"
+  },
+  "login_page":{
+    "title": "Login",
+    "hint": "You haven't logged in, login with:",
+    "username_textfield_hint": "Username",
+    "password_textfield_hint": "Password",
+    "submit_button_text": "Login"
+  }
+}

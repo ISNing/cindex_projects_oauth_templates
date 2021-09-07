@@ -4,8 +4,7 @@
                 height="100"
                 src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
         />
-        <h2>You haven't logged in. Log in with:</h2>
-        <v-card-title>Login</v-card-title>
+        <v-card-title>{{ $t("login_page.title") }}</v-card-title>
         <v-card-text>
             <v-form
                     ref="form"
@@ -16,7 +15,7 @@
                         dense
                         v-model="form.username"
                         :rules="usernameRules"
-                        label="Name"
+                        :label="$t('login_page.username_textfield_hint')"
                         required
                 />
                 <v-text-field
@@ -26,7 +25,7 @@
                         v-model="form.password"
                         :type="showPass ? 'text' : 'password'"
                         :rules="passwordRules"
-                        label="Password"
+                        :label="$t('login_page.password_textfield_hint')"
                         required
                         @click:append="showPass = !showPass"
                 />
@@ -53,10 +52,11 @@
 
 <script>
 import axios from 'axios'
-import utils from '../misc/utils'
+import utils from '@/misc/utils'
 
 export default {
-    name: 'LoginContent',
+    name: 'App',
+    layout: 'auth',
     data () {
         return {
             usernameRules: [
@@ -106,9 +106,20 @@ export default {
                 this.$refs.form.reset()
             }
         }
+    },
+    props: {
+        source: String
     }
 }
 </script>
 
-<style scoped>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

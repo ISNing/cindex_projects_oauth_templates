@@ -46,12 +46,12 @@ export default {
         return {
             mainNavItems: [
                 {
-                    name: 'Home',
+                    name: this.$t('globalDrawer.home'),
                     icon: 'home-variant-outline',
                     url: 'http://exthmui.cn'
                 },
                 {
-                    name: 'Downloads',
+                    name: this.$t('globalDrawer.downloads'),
                     icon: 'download-outline',
                     url: 'http://downloads.exthmui.cn'
                 }

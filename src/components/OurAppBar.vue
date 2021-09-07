@@ -15,7 +15,7 @@
     <span style="width: 12px" />
     <v-divider vertical />
     <span style="width: 12px" />
-    <v-toolbar-title style="vertical-align: middle">Account</v-toolbar-title>
+    <v-toolbar-title style="vertical-align: middle">{{ $t('ourAppBar.account_title')}}</v-toolbar-title>
 
     <v-spacer />
   </v-app-bar>
