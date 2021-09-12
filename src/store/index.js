@@ -1,11 +1,14 @@
 export const state = () => ({
-    locales: ['en-us', 'zh-cn'],
-    locale: 'zh-cn'
+    localesAvailable: [],
+    locale: ''
 })
 export const mutations = {
-    SET_LANG (state, locale) {
-        if (state.locales.indexOf(locale) !== -1) {
+    locale_set (state, locale) {
+        if (state.locales_available.indexOf(locale) !== -1) {
             state.locale = locale
         }
+    },
+    locales_available_set (state, localesAvailable) {
+        state.locales_available = localesAvailable
     }
 }

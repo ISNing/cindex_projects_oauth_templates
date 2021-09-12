@@ -11,6 +11,31 @@
     "title": "登录",
     "hint": "你还没有登录，现在登录：",
     "username_textfield_hint": "用户名",
-    "password_textfield_hint": "输入您的密码"
+    "password_textfield_hint": "输入您的密码",
+    "submit_button_text": "登录",
+    "signup_button_text": "创建账户",
+    "inputs_error_hints": {
+      "username_required": "缺少用户名",
+      "password_required": "缺少密码"
+    }
+  },
+  "signup_page":{
+    "title": "注册",
+    "hint": "现在注册：",
+    "username_textfield_hint": "用户名",
+    "password_textfield_hint": "输入您的密码",
+    "submit_button_text": "提交",
+    "login_button_text": "已有账户？现在登录",
+    "inputs_error_hints": {
+      "username_required": "缺少用户名",
+      "password_required": "缺少密码"
+    }
+  },
+  "errors": {
+    "_": "未知错误",
+    "__": "未知错误 {err}",
+    "unknown": {
+      "friendly": "@:errors.__"
+    }
   }
 }

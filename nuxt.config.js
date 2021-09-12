@@ -41,7 +41,6 @@ export default {
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
-        '@/plugins/i18n.js'
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -57,9 +56,21 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        '@nuxtjs/axios'
+        '@nuxtjs/axios',
+        '@nuxtjs/i18n'
     ],
 
+    i18n: {
+        locales: ['en-us', 'zh-cn'],
+        defaultLocale: 'zh-cn',
+        vueI18n: {
+            fallbackLocale: 'zh-cn',
+            messages: {
+                'en-us': require(resolve(srcDir) + 'assets/locales/en-us.json'),
+                'zh-cn': require(resolve(srcDir) + 'assets/locales/zh-cn.json')
+            }
+        }
+    },
     /*
   ** Axios module configuration
   */
@@ -70,9 +81,9 @@ export default {
     // See https://github.com/nuxt-community/axios-module#options
     },
     proxy: {
-        'api': {
-            target: 'https://raw.githubusercontent.com',
-            secure: true,
+        '/api': {
+            target: 'http://127.0.0.1:5000',
+            secure: false,
             pathRewrite: {
                 '^/api/': '/',
                 changeOrigin: true
@@ -82,12 +93,11 @@ export default {
             target: 'https://raw.githubusercontent.com',
             secure: true,
             pathRewrite: {
-                '^/api/': '/',
+                '^/github_raw/': '/',
                 changeOrigin: true
             }
-        },
+        }
     },
-
     // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
     vuetify: {
         customVariables: ['~/assets/variables.scss'],
@@ -111,7 +121,6 @@ export default {
     build: {
     },
     router: { // customize nuxt.js router (vue-router).
-        base: process.env.NODE_ENV == 'production'? './' : '/',
-        middleware: 'i18n' // middleware all pages of the application
+        base: process.env.NODE_ENV === 'production' ? './' : '/'
     }
 }

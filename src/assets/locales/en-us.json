@@ -12,6 +12,30 @@
     "hint": "You haven't logged in, login with:",
     "username_textfield_hint": "Username",
     "password_textfield_hint": "Password",
-    "submit_button_text": "Login"
+    "submit_button_text": "Login",
+    "signup_button_text": "Signup now",
+    "inputs_error_hints": {
+      "username_required": "Username is required",
+      "password_required": "Password is required"
+    }
+  },
+  "signup_page":{
+    "title": "Signup",
+    "hint": "Signup now with following information:",
+    "username_textfield_hint": "Username",
+    "password_textfield_hint": "Password",
+    "submit_button_text": "Submit",
+    "login_button_text": "Signup now",
+    "inputs_error_hints": {
+      "username_required": "Username is required",
+      "password_required": "Password is required"
+    }
+  },
+  "errors": {
+    "_": "Unknown Error",
+    "__": "Unknown Error\n{err}",
+    "unknown": {
+      "friendly": "@:errors.__"
+    }
   }
 }
