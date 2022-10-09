@@ -16,7 +16,7 @@
     "@nuxtjs/i18n": "^7.2.3",
     "core-js": "^3.25.5",
     "nuxt": "^2.15.8",
-    "vuetify": "^2.6.9"
+    "vuetify": "^2.6.11"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
