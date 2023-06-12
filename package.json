@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
-    "@babel/eslint-parser": "^7.21.3",
+    "@babel/eslint-parser": "^7.22.5",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@nuxtjs/vuetify": "^1.12.3",
