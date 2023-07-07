@@ -19,7 +19,7 @@
     "vuetify": "^3.3.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
+    "@babel/core": "^7.22.8",
     "@babel/eslint-parser": "^7.22.5",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^4.0.2",
